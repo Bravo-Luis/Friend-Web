@@ -13,6 +13,8 @@
 		346C580F28FB5E21003E2E25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346C580E28FB5E21003E2E25 /* Preview Assets.xcassets */; };
 		346C581428FB5E21003E2E25 /* Friend_Web.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 346C581228FB5E21003E2E25 /* Friend_Web.xcdatamodeld */; };
 		346C581F28FB7B90003E2E25 /* iCloudConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C581E28FB7B90003E2E25 /* iCloudConnect.swift */; };
+		346C582428FBCF0C003E2E25 /* FriendGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582328FBCF0C003E2E25 /* FriendGrid.swift */; };
+		346C582628FBD7AD003E2E25 /* line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582528FBD7AD003E2E25 /* line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		346C581528FB5E21003E2E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		346C581E28FB7B90003E2E25 /* iCloudConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudConnect.swift; sourceTree = "<group>"; };
 		346C582228FB902D003E2E25 /* Friend Web.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Friend Web.entitlements"; sourceTree = "<group>"; };
+		346C582328FBCF0C003E2E25 /* FriendGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGrid.swift; sourceTree = "<group>"; };
+		346C582528FBD7AD003E2E25 /* line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 		346C581C28FB5EF9003E2E25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				346C582328FBCF0C003E2E25 /* FriendGrid.swift */,
+				346C582528FBD7AD003E2E25 /* line.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 				346C581428FB5E21003E2E25 /* Friend_Web.xcdatamodeld in Sources */,
 				346C580A28FB5E20003E2E25 /* ContentView.swift in Sources */,
 				346C580828FB5E20003E2E25 /* Friend_WebApp.swift in Sources */,
+				346C582428FBCF0C003E2E25 /* FriendGrid.swift in Sources */,
+				346C582628FBD7AD003E2E25 /* line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

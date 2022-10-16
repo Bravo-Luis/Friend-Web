@@ -11,15 +11,11 @@ import CoreData
 struct ContentView: View {
     @StateObject var icvm = CloudKitUserViewModel()
     @State var userList = [UserModel]()
+    
     var body: some View {
-        VStack{
-            ForEach(userList) { list in
-                Text(list.username)
-            }
-            Text(icvm.userList.count.formatted())
-            Text(icvm.isSignedInToiCloud.description)
-            Text(icvm.error)
-            Text(icvm.userName)
+        
+        ZStack{
+            FriendGrid()
         }
         .onAppear{
             DispatchQueue.main.async {
@@ -27,6 +23,7 @@ struct ContentView: View {
                 userList = icvm.userList
             }
         }
+        
     }
     
 }

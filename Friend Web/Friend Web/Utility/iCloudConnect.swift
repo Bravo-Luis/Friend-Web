@@ -47,7 +47,6 @@ class CloudKitUserViewModel : ObservableObject {
                     }
                     
                 }
-
         }
     }
     
