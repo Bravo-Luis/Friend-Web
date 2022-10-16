@@ -12,6 +12,8 @@
 		346C580C28FB5E21003E2E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346C580B28FB5E21003E2E25 /* Assets.xcassets */; };
 		346C580F28FB5E21003E2E25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346C580E28FB5E21003E2E25 /* Preview Assets.xcassets */; };
 		346C581428FB5E21003E2E25 /* Friend_Web.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 346C581228FB5E21003E2E25 /* Friend_Web.xcdatamodeld */; };
+		346C581F28FB7B90003E2E25 /* iCloudConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C581E28FB7B90003E2E25 /* iCloudConnect.swift */; };
+		346C582128FB7D05003E2E25 /* iCloudUtilityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582028FB7D05003E2E25 /* iCloudUtilityClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		346C580E28FB5E21003E2E25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		346C581328FB5E21003E2E25 /* Friend_Web.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friend_Web.xcdatamodel; sourceTree = "<group>"; };
 		346C581528FB5E21003E2E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		346C581E28FB7B90003E2E25 /* iCloudConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudConnect.swift; sourceTree = "<group>"; };
+		346C582028FB7D05003E2E25 /* iCloudUtilityClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudUtilityClass.swift; sourceTree = "<group>"; };
+		346C582228FB902D003E2E25 /* Friend Web.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Friend Web.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 		346C580628FB5E20003E2E25 /* Friend Web */ = {
 			isa = PBXGroup;
 			children = (
+				346C582228FB902D003E2E25 /* Friend Web.entitlements */,
 				346C580728FB5E20003E2E25 /* Friend_WebApp.swift */,
 				346C580928FB5E20003E2E25 /* ContentView.swift */,
 				346C581D28FB5F10003E2E25 /* Utility */,
@@ -92,6 +98,8 @@
 		346C581D28FB5F10003E2E25 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				346C581E28FB7B90003E2E25 /* iCloudConnect.swift */,
+				346C582028FB7D05003E2E25 /* iCloudUtilityClass.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -166,7 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346C581F28FB7B90003E2E25 /* iCloudConnect.swift in Sources */,
 				346C581428FB5E21003E2E25 /* Friend_Web.xcdatamodeld in Sources */,
+				346C582128FB7D05003E2E25 /* iCloudUtilityClass.swift in Sources */,
 				346C580A28FB5E20003E2E25 /* ContentView.swift in Sources */,
 				346C580828FB5E20003E2E25 /* Friend_WebApp.swift in Sources */,
 			);
@@ -294,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Friend Web/Friend Web.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Friend Web/Preview Content\"";
@@ -305,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Friend Web/Friend Web.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Friend Web/Preview Content\"";
@@ -334,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
