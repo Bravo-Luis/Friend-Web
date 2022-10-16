@@ -14,6 +14,7 @@ struct line: View {
     @State var height = UIScreen.main.bounds.height
     @State var width = UIScreen.main.bounds.width
     
+    @State var lineWidth = 10
     var body: some View {
         Path(){
             path in
@@ -21,7 +22,7 @@ struct line: View {
             
         }
         .offset(y: -height / 2.2)
-        .stroke(style: .init(lineWidth:15))
+        .stroke(style: .init(lineWidth:CGFloat(lineWidth)))
         .opacity(0.5)
         .onAppear{
             start.x += width / 2
@@ -29,6 +30,8 @@ struct line: View {
             
             end.x += width / 2
             end.y += height / 2
+            
+            
         }
         .offset(y: 5)
     }

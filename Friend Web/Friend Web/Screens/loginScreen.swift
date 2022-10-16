@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct loginScreen: View {
-    @ObservedObject var icvm : CloudKitUserViewModel
+    @State var icvm : CloudKitUserViewModel
     @State var username : String = ""
     @State var password : String = ""
     

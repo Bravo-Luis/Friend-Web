@@ -21,8 +21,8 @@ struct ContentView: View {
             }else{
                 
                 ZStack{
-                    animatedBG()
-                    HomeScreen()
+                    //animatedBG()
+                    HomeScreen(icvm: icvm)
                 }
                 
 

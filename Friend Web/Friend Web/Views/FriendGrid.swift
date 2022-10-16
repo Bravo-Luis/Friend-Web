@@ -27,7 +27,7 @@ struct FriendGrid: View {
                     .frame(width: circleSize)
                     .ignoresSafeArea()
                     
-            }.zIndex(-1)
+            }.zIndex(0)
             
             ForEach(lineList) { lin in
                 line(start: CGPoint(x: CGFloat(lin.startx), y: CGFloat(lin.starty)), end: CGPoint(x: CGFloat(lin.endx), y: CGFloat(lin.endy)))

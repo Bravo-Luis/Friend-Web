@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @ObservedObject var icvm = CloudKitUserViewModel()
+    @State var icvm : CloudKitUserViewModel
     @State var inspecting = false
     @State var focus : UserModel = UserModel(username: "", password: "", age: 0, sex: "", firstName: "", lastName: "", description: "", friendsList: [String]())
     @State var settings = false
@@ -36,11 +36,7 @@ struct HomeScreen: View {
     }
 }
 
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreen()
-    }
-}
+
 
 struct Header : View {
     
