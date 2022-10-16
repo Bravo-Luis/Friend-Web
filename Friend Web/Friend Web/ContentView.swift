@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State var icvm = CloudKitUserViewModel()
+    @StateObject var icvm = CloudKitUserViewModel()
     @State var userList = [UserModel]()
     var body: some View {
         VStack{
@@ -22,8 +22,10 @@ struct ContentView: View {
             Text(icvm.userName)
         }
         .onAppear{
-            icvm.fetchItems()
-            userList = icvm.userList
+            DispatchQueue.main.async {
+                icvm.fetchItems()
+                userList = icvm.userList
+            }
         }
     }
     

@@ -1,17 +1,9 @@
-//
-//  iCloudConnect.swift
-//  Friend Web
-//
-//  Created by Luis Bravo on 10/15/22.
-//
-
 import Foundation
 import CloudKit
 import Combine
 import UIKit
 
 // MARK: iCloud View Model
-
 let container = CKContainer(identifier: "iCloud.HugoBravo.Friend-Web")
 
 class CloudKitUserViewModel : ObservableObject {
@@ -29,6 +21,7 @@ class CloudKitUserViewModel : ObservableObject {
     private func getiCloudStatus(){
         
             container.accountStatus { [weak self] returnedStatus, returnedError in
+                DispatchQueue.main.async {
                     switch returnedStatus {
                     case .available:
                         self?.isSignedInToiCloud = true
@@ -41,6 +34,7 @@ class CloudKitUserViewModel : ObservableObject {
                     default:
                         self?.error = CloudKitError.iCloudAccountUnknown.rawValue
                     }
+                }
             }
     }
     
@@ -48,7 +42,9 @@ class CloudKitUserViewModel : ObservableObject {
         container.requestApplicationPermission([.userDiscoverability]) { [weak self] returnedStatus, returnedError in
 
                 if returnedStatus == .granted{
-                    self?.permissionStatus = true
+                    DispatchQueue.main.async {
+                        self?.permissionStatus = true
+                    }
                     
                 }
 
@@ -58,18 +54,21 @@ class CloudKitUserViewModel : ObservableObject {
     func fetchiCloudUserRecordID(){
         container.fetchUserRecordID { returnedID, returnedError in
             if let id = returnedID {
-                self.discoveriCloudUser(id: id)
+            
+                    self.discoveriCloudUser(id: id)
             }
         }
     }
     
     func discoveriCloudUser(id : CKRecord.ID) {
         container.discoverUserIdentity(withUserRecordID: id) { returnedIdentity, returnedError in
-            DispatchQueue.main.async {
+
                 if let name = returnedIdentity?.nameComponents?.givenName {
-                    self.userName = name
+                    DispatchQueue.main.async {
+                        self.userName = name
+                    }
+                    
                 }
-            }
         }
     }
     
@@ -103,7 +102,6 @@ class CloudKitUserViewModel : ObservableObject {
 
                     returnedUsers.append(UserModel(username: username, password: password, age: age, sex: sex, firstName: firstName, lastName: lastName, description: description, friendsList: friendsList))
                     
-                    
                 case .failure(let error):
                     print("error recordMatchedBlock \(error)")
                 }
@@ -121,13 +119,16 @@ class CloudKitUserViewModel : ObservableObject {
                 guard let friendsList = returnedRecord["friendList"] as? [String] else {return}
                 
                 self.userList.append(UserModel(username: username, password: password, age: age, sex: sex, firstName: firstName, lastName: lastName, description: description, friendsList: friendsList))
+                
             }
         }
         
         if #available(iOS 15.0, *){
             queryOperation.queryResultBlock = {[weak self] returnedResult in
                 print("Returned queryResultBlock: \(returnedResult)")
+                DispatchQueue.main.async {
                     self?.userList = returnedUsers
+                }
             }
         }
         else{
@@ -149,7 +150,6 @@ class CloudKitUserViewModel : ObservableObject {
 
 
 // MARK: UserModel
-
 struct UserModel : Equatable, Codable, Identifiable {
     var id = UUID()
     let username : String
@@ -167,6 +167,3 @@ struct UserModel : Equatable, Codable, Identifiable {
 
     
 }
-
-
-
