@@ -3,6 +3,7 @@ import CloudKit
 import Combine
 import UIKit
 
+
 // MARK: iCloud View Model
 let container = CKContainer(identifier: "iCloud.HugoBravo.Friend-Web")
 
@@ -10,13 +11,60 @@ class CloudKitUserViewModel : ObservableObject {
     @Published var permissionStatus : Bool = false
     @Published var isSignedInToiCloud : Bool = false
     @Published var error : String = ""
-    @Published var userName : String = ""
     @Published var userList = [UserModel]()
+    @Published var iCloudUsername : String  = ""
+    @Published var username: String {
+            didSet {
+                UserDefaults.standard.set(username, forKey: "username")
+            }
+        }
+    
     init() {
+        
+        self.username = UserDefaults.standard.object(forKey: "username") as? String ?? ""
+        
         getiCloudStatus()
         requestPermission()
         fetchiCloudUserRecordID()
+        fetchItems()
     }
+    
+    
+    
+    func login(usernameText : String, password : String) {
+        for i in userList {
+            if i.username == usernameText {
+                if i.password == password {
+                    UserDefaults.standard.set(usernameText, forKey: "username")
+                    self.username = UserDefaults.standard.object(forKey: "username") as? String ?? ""
+                }
+            }
+        }
+    }
+    
+    func fetchFriends()->[UserModel]{
+        var CurrentUser = UserModel(username: "", password: "", age: 0, sex: "", firstName: "", lastName: "", description: "", friendsList: [""])
+        
+        
+        for user in userList{
+            if user.username == self.username {
+                CurrentUser = user
+                break
+            }
+        }
+        
+        var friends = [UserModel]()
+        
+        for list in self.userList {
+            for friend in CurrentUser.friendsList {
+                if list.username == friend {
+                    friends.append(list)
+                }
+            }
+        }
+        return friends
+    }
+    
     
     private func getiCloudStatus(){
         
@@ -64,7 +112,7 @@ class CloudKitUserViewModel : ObservableObject {
 
                 if let name = returnedIdentity?.nameComponents?.givenName {
                     DispatchQueue.main.async {
-                        self.userName = name
+                        self.iCloudUsername = name
                     }
                     
                 }
@@ -118,7 +166,6 @@ class CloudKitUserViewModel : ObservableObject {
                 guard let friendsList = returnedRecord["friendList"] as? [String] else {return}
                 
                 self.userList.append(UserModel(username: username, password: password, age: age, sex: sex, firstName: firstName, lastName: lastName, description: description, friendsList: friendsList))
-                
             }
         }
         
@@ -166,3 +213,5 @@ struct UserModel : Equatable, Codable, Identifiable {
 
     
 }
+
+

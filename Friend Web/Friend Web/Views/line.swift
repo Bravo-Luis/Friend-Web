@@ -20,8 +20,9 @@ struct line: View {
             path.addLines([start, end])
             
         }
-        .stroke(style: .init(lineWidth:10))
-     
+        .offset(y: -height / 2.2)
+        .stroke(style: .init(lineWidth:15))
+        .opacity(0.5)
         .onAppear{
             start.x += width / 2
             start.y += height / 2

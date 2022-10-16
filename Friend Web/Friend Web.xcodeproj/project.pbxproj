@@ -15,6 +15,11 @@
 		346C581F28FB7B90003E2E25 /* iCloudConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C581E28FB7B90003E2E25 /* iCloudConnect.swift */; };
 		346C582428FBCF0C003E2E25 /* FriendGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582328FBCF0C003E2E25 /* FriendGrid.swift */; };
 		346C582628FBD7AD003E2E25 /* line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582528FBD7AD003E2E25 /* line.swift */; };
+		346C582828FBE606003E2E25 /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582728FBE606003E2E25 /* loginScreen.swift */; };
+		346C582C28FC170C003E2E25 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582B28FC170C003E2E25 /* HomeScreen.swift */; };
+		346C583028FC1D9F003E2E25 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582F28FC1D9F003E2E25 /* NodeView.swift */; };
+		346C583228FC390B003E2E25 /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C583128FC390B003E2E25 /* profileView.swift */; };
+		3498095E28FC634400530722 /* animatedBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498095D28FC634400530722 /* animatedBG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		346C582228FB902D003E2E25 /* Friend Web.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Friend Web.entitlements"; sourceTree = "<group>"; };
 		346C582328FBCF0C003E2E25 /* FriendGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGrid.swift; sourceTree = "<group>"; };
 		346C582528FBD7AD003E2E25 /* line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = line.swift; sourceTree = "<group>"; };
+		346C582728FBE606003E2E25 /* loginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginScreen.swift; sourceTree = "<group>"; };
+		346C582B28FC170C003E2E25 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		346C582F28FC1D9F003E2E25 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
+		346C583128FC390B003E2E25 /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		3498095D28FC634400530722 /* animatedBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedBG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,8 @@
 		346C581B28FB5EEA003E2E25 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				346C582728FBE606003E2E25 /* loginScreen.swift */,
+				346C582B28FC170C003E2E25 /* HomeScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -95,6 +107,9 @@
 			children = (
 				346C582328FBCF0C003E2E25 /* FriendGrid.swift */,
 				346C582528FBD7AD003E2E25 /* line.swift */,
+				346C582F28FC1D9F003E2E25 /* NodeView.swift */,
+				346C583128FC390B003E2E25 /* profileView.swift */,
+				3498095D28FC634400530722 /* animatedBG.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,12 +192,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3498095E28FC634400530722 /* animatedBG.swift in Sources */,
 				346C581F28FB7B90003E2E25 /* iCloudConnect.swift in Sources */,
 				346C581428FB5E21003E2E25 /* Friend_Web.xcdatamodeld in Sources */,
+				346C583228FC390B003E2E25 /* profileView.swift in Sources */,
 				346C580A28FB5E20003E2E25 /* ContentView.swift in Sources */,
 				346C580828FB5E20003E2E25 /* Friend_WebApp.swift in Sources */,
+				346C582C28FC170C003E2E25 /* HomeScreen.swift in Sources */,
+				346C583028FC1D9F003E2E25 /* NodeView.swift in Sources */,
 				346C582428FBCF0C003E2E25 /* FriendGrid.swift in Sources */,
 				346C582628FBD7AD003E2E25 /* line.swift in Sources */,
+				346C582828FBE606003E2E25 /* loginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

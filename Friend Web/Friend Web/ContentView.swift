@@ -9,18 +9,23 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @StateObject var icvm = CloudKitUserViewModel()
-    @State var userList = [UserModel]()
+    @ObservedObject var icvm = CloudKitUserViewModel()
+    @State var friendList = [UserModel]()
+        
     
     var body: some View {
         
         ZStack{
-            FriendGrid()
-        }
-        .onAppear{
-            DispatchQueue.main.async {
-                icvm.fetchItems()
-                userList = icvm.userList
+            if icvm.username == "" {
+                loginScreen(icvm: icvm)
+            }else{
+                
+                ZStack{
+                    animatedBG()
+                    HomeScreen()
+                }
+                
+
             }
         }
         
@@ -33,3 +38,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
