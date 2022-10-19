@@ -14,7 +14,9 @@ Features
 - [ ] Combine
 - [ ] Better way to get friends list
 - [ ] Animation of nodes and lines
+- [ ] Add Friends
 
 
 https://user-images.githubusercontent.com/91937163/196763601-30d9dd3d-e648-434d-a29f-c0f3a29d7c5f.mp4
 
+All data is stored in iCloud database
