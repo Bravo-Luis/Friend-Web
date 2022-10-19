@@ -23,6 +23,8 @@ struct ContentView: View {
                 ZStack{
                     //animatedBG()
                     HomeScreen(icvm: icvm)
+                    
+                    AddFriend()
                 }
                 
 

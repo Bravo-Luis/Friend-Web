@@ -20,6 +20,7 @@
 		346C583028FC1D9F003E2E25 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C582F28FC1D9F003E2E25 /* NodeView.swift */; };
 		346C583228FC390B003E2E25 /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C583128FC390B003E2E25 /* profileView.swift */; };
 		3498095E28FC634400530722 /* animatedBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498095D28FC634400530722 /* animatedBG.swift */; };
+		DABB6CF729006F5E0095F6DB /* AddFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABB6CF629006F5E0095F6DB /* AddFriend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		346C582F28FC1D9F003E2E25 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		346C583128FC390B003E2E25 /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
 		3498095D28FC634400530722 /* animatedBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedBG.swift; sourceTree = "<group>"; };
+		DABB6CF629006F5E0095F6DB /* AddFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				346C582F28FC1D9F003E2E25 /* NodeView.swift */,
 				346C583128FC390B003E2E25 /* profileView.swift */,
 				3498095D28FC634400530722 /* animatedBG.swift */,
+				DABB6CF629006F5E0095F6DB /* AddFriend.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				3498095E28FC634400530722 /* animatedBG.swift in Sources */,
 				346C581F28FB7B90003E2E25 /* iCloudConnect.swift in Sources */,
 				346C581428FB5E21003E2E25 /* Friend_Web.xcdatamodeld in Sources */,
+				DABB6CF729006F5E0095F6DB /* AddFriend.swift in Sources */,
 				346C583228FC390B003E2E25 /* profileView.swift in Sources */,
 				346C580A28FB5E20003E2E25 /* ContentView.swift in Sources */,
 				346C580828FB5E20003E2E25 /* Friend_WebApp.swift in Sources */,
